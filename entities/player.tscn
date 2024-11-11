@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcck834h8cojq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4sl6"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h4sl6")

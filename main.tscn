@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwivb0avuhhcu"]
+
+[ext_resource type="PackedScene" uid="uid://bcck834h8cojq" path="res://entities/player.tscn" id="1_wtt7l"]
+[ext_resource type="PackedScene" uid="uid://cuunhx2ic437u" path="res://entities/blume.tscn" id="1_xfpha"]
+[ext_resource type="Script" path="res://entities/player.gd" id="2_r55fm"]
+[ext_resource type="PackedScene" uid="uid://b456lihbm1q4c" path="res://entities/blume 2.tscn" id="2_x6b6m"]
+
+[node name="Polygon2D" type="Polygon2D"]
+position = Vector2(-185, -134)
+scale = Vector2(864, 619)
+color = Color(0.406464, 0.808949, 0.573352, 1)
+polygon = PackedVector2Array(0, 0, 1, 0, 1, 1, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_wtt7l")]
+position = Vector2(0.16088, 0.103393)
+script = ExtResource("2_r55fm")
+
+[node name="Blume" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.324074, 0.310178)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume2" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.422454, 0.405493)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume3" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.415509, 0.258481)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume4" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.243056, 0.389338)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume5" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.260417, 0.281099)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume6" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.361111, 0.28433)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume7" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.368056, 0.411955)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume8" parent="." instance=ExtResource("1_xfpha")]
+position = Vector2(0.217593, 0.224556)
+scale = Vector2(0.00115741, 0.00161551)
+
+[node name="Blume9" parent="." instance=ExtResource("2_x6b6m")]
+position = Vector2(0.304398, 0.420032)
+scale = Vector2(0.00115741, 0.00161551)

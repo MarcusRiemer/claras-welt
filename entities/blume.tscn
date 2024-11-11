@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuunhx2ic437u"]
+
+[ext_resource type="Texture2D" uid="uid://b34x7hfio16qv" path="res://entities/001 Blume.png" id="1_pvm1f"]
+
+[node name="Blume" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_pvm1f")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://001 Blume.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "3a962296e3c8828d8e810113f3537188"
