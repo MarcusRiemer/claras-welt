@@ -1,23 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://cuunhx2ic437u"]
+[gd_scene load_steps=5 format=3 uid="uid://cuunhx2ic437u"]
 
-[ext_resource type="Texture2D" uid="uid://b34x7hfio16qv" path="res://entities/001 Blume.png" id="1_pvm1f"]
+[ext_resource type="Texture2D" uid="uid://cyoelwsre1lkj" path="res://entities/001 Blume Marcus.png" id="1_6k8al"]
 
-[node name="Blume" type="Sprite2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoc1d"]
+atlas = ExtResource("1_6k8al")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkcwg"]
+atlas = ExtResource("1_6k8al")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2omlq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoc1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkcwg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Blume" type="AnimatedSprite2D"]
 texture_filter = 1
-texture = ExtResource("1_pvm1f")
+sprite_frames = SubResource("SpriteFrames_2omlq")
+autoplay = "default"
+frame_progress = 0.140305
 metadata/_aseprite_wizard_interface_config_ = {
-"pending_changes": {}
+"layer_section": true,
+"output_section": false,
+"pending_changes": {},
+"slice_section": false
 }
 metadata/_aseprite_wizard_config_ = {
-"i_mode": 1,
-"keep_anim_length": false,
 "layer": "",
 "o_ex_p": "",
 "o_folder": "",
 "o_name": "",
 "only_visible": false,
-"player": "",
 "slice": "",
-"source": "res://001 Blume.aseprite"
+"source": "res://entities/001 Blume Marcus.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "3a962296e3c8828d8e810113f3537188"
+metadata/_aseprite_wizard_source_file_hash_ = "9740c5eda72bf47c832f4afcb4e7696c"
