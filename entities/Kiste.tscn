@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c1junmeetbcmj"]
+
+[node name="Kiste" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-13, -7, 9, -9, 9, 14, -11, 13)
+
+[node name="Kiste" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-13, -7, 9, -9, 9, 14, -11, 13)

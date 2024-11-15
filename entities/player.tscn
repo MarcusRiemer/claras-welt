@@ -1,11 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcck834h8cojq"]
+[gd_scene load_steps=5 format=3 uid="uid://bcck834h8cojq"]
+
+[ext_resource type="Texture2D" uid="uid://ddqgc2vvodjfb" path="res://entities/004 Hummel.png" id="1_j8vbm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4sl6"]
+radius = 5.0
+height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eii6y"]
+atlas = ExtResource("1_j8vbm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ichl4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eii6y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.57079
 shape = SubResource("CapsuleShape2D_h4sl6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ichl4")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://entities/004 Hummel.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "ad76554d6bd4f3130232bd4a84a66ba0"
