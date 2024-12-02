@@ -1,14 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwivb0avuhhcu"]
+[gd_scene load_steps=7 format=4 uid="uid://dwivb0avuhhcu"]
 
 [ext_resource type="PackedScene" uid="uid://bcck834h8cojq" path="res://entities/player.tscn" id="1_wtt7l"]
 [ext_resource type="PackedScene" uid="uid://cuunhx2ic437u" path="res://entities/blume.tscn" id="1_xfpha"]
+[ext_resource type="TileSet" uid="uid://dal3b2dlewlxr" path="res://tilesets/example.tres" id="1_xp1oe"]
 [ext_resource type="Script" path="res://entities/player.gd" id="2_r55fm"]
 [ext_resource type="PackedScene" uid="uid://c1junmeetbcmj" path="res://entities/Kiste.tscn" id="3_u7v7n"]
+[ext_resource type="PackedScene" uid="uid://cqrk0mk3qt88j" path="res://entities/wolke.tscn" id="5_kb4rc"]
 
 [node name="Polygon2D" type="Polygon2D"]
 position = Vector2(-442, -109)
 color = Color(0.406464, 0.808949, 0.573352, 1)
 polygon = PackedVector2Array(-1000, -1000, -1000, 1000, 1000, 1000, 1000, -1000)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD8/wIAAAADAAAAAAAAAAIAAAADAAAAAAAEAAIAAAADAAAAAAAIAAIAAAADAAAAAAD4/wIAAAADAAAAAAAMAAIAAAABAAEAAAAOAP7/AAADAAEAAAASAP7/AAABAAIAAAAWAP7/AAABAAIAAAAaAP7/AAABAAIAAAAeAP7/AAABAAIAAAAiAP7/AAABAAIAAAAmAP7/AAABAAIAAAAmAPr/AAABAAAAAAAmAPb/AAABAAAAAAAmAPL/AAABAAAAAAAmAO7/AAABAAAAAAAmAOr/AAACAAIAAAAiAOr/AAABAAIAAAAeAOr/AAABAAIAAAAaAOr/AAABAAIAAAAWAOr/AAABAAIAAAASAOr/AAABAAIAAAAOAOr/AAABAAIAAAAKAOr/AAADAAEAAAAKAO7/AAADAAIAAAAKAPL/AAADAAIAAAAKAPb/AAADAAIAAAD0/wIAAAACAAAAAADy//7/AAABAAAAAADy//r/AAABAAAAAADy//b/AAABAAAAAAD2//T/AAADAAAAAAD6//T/AAADAAAAAAD+//T/AAADAAAAAAACAPT/AAADAAAAAAA=")
+tile_set = ExtResource("1_xp1oe")
 
 [node name="Kiste" parent="." instance=ExtResource("3_u7v7n")]
 position = Vector2(46, -17.4216)
@@ -16,12 +22,30 @@ position = Vector2(46, -17.4216)
 [node name="Kiste2" parent="." instance=ExtResource("3_u7v7n")]
 position = Vector2(45, 38.3276)
 
-[node name="Player" parent="." instance=ExtResource("1_wtt7l")]
-position = Vector2(0.160889, 0.103394)
-script = ExtResource("2_r55fm")
-
 [node name="Blume" parent="." instance=ExtResource("1_xfpha")]
 position = Vector2(520, 390.244)
 
 [node name="Blume2" parent="." instance=ExtResource("1_xfpha")]
 position = Vector2(-12.0551, 537)
+
+[node name="Player" parent="." instance=ExtResource("1_wtt7l")]
+position = Vector2(0.160889, 0.103394)
+script = ExtResource("2_r55fm")
+
+[node name="Wolke" parent="." instance=ExtResource("5_kb4rc")]
+position = Vector2(-340, -241)
+
+[node name="Wolke2" parent="." instance=ExtResource("5_kb4rc")]
+position = Vector2(-28, -279)
+
+[node name="Wolke3" parent="." instance=ExtResource("5_kb4rc")]
+position = Vector2(334, 23)
+
+[node name="Wolke4" parent="." instance=ExtResource("5_kb4rc")]
+position = Vector2(-170, 243)
+
+[node name="Wolke5" parent="." instance=ExtResource("5_kb4rc")]
+position = Vector2(-360, 32)
+
+[node name="Wolke6" parent="." instance=ExtResource("5_kb4rc")]
+position = Vector2(133, 188)

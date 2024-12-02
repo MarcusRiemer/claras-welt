@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqrk0mk3qt88j"]
+
+[ext_resource type="Texture2D" uid="uid://vwt8ypkxk824" path="res://entities/006 Wolke.png" id="1_r03k3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oew2j"]
+atlas = ExtResource("1_r03k3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k83m7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oew2j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Wolke" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_k83m7")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://entities/006 Wolke.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "65d59654cd7f08d93d47bfd108e37cc3"
