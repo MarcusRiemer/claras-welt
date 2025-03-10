@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://wc67fct2pfhy"]
+
+[ext_resource type="Texture2D" uid="uid://dcmfj21fvlbuo" path="res://entities/007 Aal.png" id="1_13buw"]
+[ext_resource type="Script" path="res://entities/player.gd" id="1_oki8d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_260ow"]
+atlas = ExtResource("1_13buw")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pssl5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_260ow")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmbij"]
+radius = 3.0
+height = 34.0
+
+[node name="aal" type="CharacterBody2D"]
+script = ExtResource("1_oki8d")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 5)
+sprite_frames = SubResource("SpriteFrames_pssl5")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"slice": "",
+"source": "res://entities/007 Aal.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1003865406c622991dbb191dbabc432f"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_qmbij")
+
+[node name="Camera2D" type="Camera2D" parent="."]

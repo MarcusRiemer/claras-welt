@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://wr767hlnf8h4"]
+[gd_scene load_steps=5 format=3 uid="uid://bcck834h8cojq"]
 
 [ext_resource type="Texture2D" uid="uid://ddqgc2vvodjfb" path="res://entities/004 Hummel.png" id="1_j8vbm"]
 
@@ -21,7 +21,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Hummel" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
